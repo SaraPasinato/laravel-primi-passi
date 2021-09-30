@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>Hello World</h1>
+    <h4>{{$name}}</h4>
+    <ul>
+        @foreach ($list as $flower)
+        <li>{{$flower ?? ''}}</li>
+        @endforeach
+    </ul>
 </body>
 </html>

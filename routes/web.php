@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $flowers=[
+         'name'=>'Fiori',
+        'list'=>['Rose','Lily','Tulip','Orchid'],];
+    return view('home',$flowers);
 });
