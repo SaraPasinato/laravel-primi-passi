@@ -15,10 +15,7 @@
             <ul>
                 @foreach ($links as $l)
                 <li>
-                
-                    <a href="{{route($l['url'])}}" >{{$l['title']}}</a>
-            
-   
+                    <a href="{{route($l['url'])}}">{{$l['title']}}</a>
                 </li>
                 @endforeach
             </ul>
@@ -54,15 +51,18 @@
         justify-content: space-around;
         align-items: center;
     }
-    main{
-       width:1000px;
-       margin: 0 auto;
+
+    main {
+        width: 1000px;
+        margin: 0 auto;
     }
-    
-    
-    main ul,h3{
+
+
+    main ul,
+    h3 {
         margin-left: 100px;
     }
+
     ul li {
         list-style-type: none;
 
