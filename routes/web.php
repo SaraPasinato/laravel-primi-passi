@@ -14,8 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $flowers=[
-         'name'=>'Fiori',
-        'list'=>['Rose','Lily','Tulip','Orchid'],];
-    return view('home',$flowers);
-});
+    $flowers = [
+        'name' => 'Fiori',
+        'list' => ['Rose', 'Lily', 'Tulip', 'Orchid'],
+        'links' => [
+           [ 'title'=>'HOME', 'url'=>'home' ],
+           [ 'title'=>'PRODOTTI', 'url'=>'prod' ],
+           [ 'title'=>'INFO', 'url'=>'info' ],
+        ],
+    ];
+   // dump($flowers);
+    return view('home', $flowers);
+})->name('home');
+
+Route::get('/product', function () {
+
+    return view('sub.product');
+})->name('prod');
+
+Route::get('/info', function () {
+
+    return view('sub.info');
+})->name('info');
